@@ -16,3 +16,7 @@ Examples:
 - I’ve updated the product images on the collection page.
 - I’ve added the discount information to the product page.
 - I’ve fixed the layout on the mobile product page.
+
+---------------------
+
+5. I’ve updated the product page so that the 1 kg variant is selected by default. Please review it and let me know if any further changes are needed.
