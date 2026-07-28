@@ -1,0 +1,504 @@
+ENGLISH GRAMMAR: COMPLETE TENSE GUIDE
+=====================================
+
+Basic terms
+-----------
+Subject: The person or thing that performs the action.
+Examples: I, you, he, she, it, we, they, Rahul, the customer
+
+V1: Base form of a verb
+Examples: work, go, write, update
+
+V2: Past form of a verb
+Examples: worked, went, wrote, updated
+
+V3: Past participle form of a verb
+Examples: worked, gone, written, updated
+
+Verb + ing: Present participle
+Examples: working, going, writing, updating
+
+Important short forms
+---------------------
+I am = I’m
+You are = You’re
+He is = He’s
+I have = I’ve
+He has = He’s
+I will = I’ll
+Do not = Don’t
+Does not = Doesn’t
+Did not = Didn’t
+Will not = Won’t
+Cannot = Can’t
+
+
+THE 12 ENGLISH TENSES
+=====================
+
+1. SIMPLE PRESENT TENSE
+-----------------------
+Use:
+- Habits and routines
+- General facts
+- Regular or repeated actions
+- Permanent situations
+
+Hindi पहचान:
+ता है, ती है, ते हैं
+
+Structure:
+Positive: Subject + V1(s/es) + object
+Negative: Subject + do/does not + V1 + object
+Question: Do/Does + subject + V1 + object?
+
+Use “s” or “es” with he, she, it, or a singular name.
+
+Examples:
+- I update the website every day.
+- He updates the product page every day.
+- I do not update the website on Sunday.
+- Does she check the orders every morning?
+- The sun rises in the east.
+
+Common mistake:
+Incorrect: He update the website.
+Correct: He updates the website.
+
+
+2. PRESENT CONTINUOUS TENSE
+---------------------------
+Use:
+- An action happening right now
+- A temporary action
+- A planned near-future action
+
+Hindi पहचान:
+रहा हूँ, रही है, रहे हैं
+
+Structure:
+Positive: Subject + am/is/are + V1-ing + object
+Negative: Subject + am/is/are not + V1-ing + object
+Question: Am/Is/Are + subject + V1-ing + object?
+
+Examples:
+- I am updating the product page.
+- She is checking the website.
+- They are not working on the collection page.
+- Are you testing the new feature?
+- We are meeting the client tomorrow.
+
+Common mistake:
+Incorrect: I am update the page.
+Correct: I am updating the page.
+
+
+3. PRESENT PERFECT TENSE
+------------------------
+Use:
+- A recently completed action
+- A past action whose result is important now
+- Life experience without mentioning an exact past time
+- An action completed at an unspecified time
+
+Hindi पहचान:
+चुका हूँ, चुकी है, किया है, हुआ है
+
+Structure:
+Positive: Subject + has/have + V3 + object
+Negative: Subject + has/have not + V3 + object
+Question: Has/Have + subject + V3 + object?
+
+Use “has” with he, she, it, or a singular name.
+Use “have” with I, you, we, and they.
+
+Examples:
+- I have updated the offers on the product page.
+- She has fixed the mobile menu.
+- We have not completed the work yet.
+- Have you checked the changes?
+- The developer has resolved the issue.
+
+Common mistake:
+Incorrect: I have updated it yesterday.
+Correct: I updated it yesterday.
+
+Reason:
+Use Simple Past with a finished past time such as yesterday, last week, or in 2025.
+
+
+4. PRESENT PERFECT CONTINUOUS TENSE
+-----------------------------------
+Use:
+- An action that started in the past and is still continuing
+- A recently stopped action whose effect is visible now
+- To emphasize the duration of an action
+
+Hindi पहचान:
+से कर रहा हूँ, से काम कर रही है
+
+Structure:
+Positive: Subject + has/have been + V1-ing + since/for
+Negative: Subject + has/have not been + V1-ing + since/for
+Question: Has/Have + subject + been + V1-ing + since/for?
+
+Since = starting point
+Examples: since Monday, since 10 a.m., since 2024
+
+For = duration
+Examples: for two hours, for three days, for a year
+
+Examples:
+- I have been working on this website for two hours.
+- She has been testing the feature since morning.
+- We have not been receiving orders since Monday.
+- Have you been waiting for a long time?
+
+Common mistake:
+Incorrect: I am working here since 2024.
+Correct: I have been working here since 2024.
+
+
+5. SIMPLE PAST TENSE
+--------------------
+Use:
+- A completed action in the past
+- An action connected to a finished past time
+- A sequence of completed past actions
+
+Hindi पहचान:
+किया, गया, आया, हुआ
+
+Structure:
+Positive: Subject + V2 + object
+Negative: Subject + did not + V1 + object
+Question: Did + subject + V1 + object?
+
+Examples:
+- I updated the product page yesterday.
+- She fixed the issue last night.
+- We did not change the design.
+- Did you test the website?
+- I opened the file, checked the code, and fixed the error.
+
+Common mistake:
+Incorrect: Did you checked the page?
+Correct: Did you check the page?
+
+Reason:
+Always use V1 after “did.”
+
+
+6. PAST CONTINUOUS TENSE
+------------------------
+Use:
+- An action that was in progress at a specific past time
+- A continuing past action interrupted by another action
+- Two actions happening at the same time in the past
+
+Hindi पहचान:
+रहा था, रही थी, रहे थे
+
+Structure:
+Positive: Subject + was/were + V1-ing + object
+Negative: Subject + was/were not + V1-ing + object
+Question: Was/Were + subject + V1-ing + object?
+
+Use “was” with I, he, she, it, or a singular name.
+Use “were” with you, we, and they.
+
+Examples:
+- I was updating the page at 5 p.m.
+- They were testing the website.
+- She was not working when I called her.
+- Were you checking the mobile view?
+- I was writing the code while he was testing it.
+
+
+7. PAST PERFECT TENSE
+---------------------
+Use:
+- An action completed before another action in the past
+- To show which of two past actions happened first
+
+Hindi पहचान:
+कर चुका था, कर लिया था, हो गया था
+
+Structure:
+Positive: Subject + had + V3 + object
+Negative: Subject + had not + V3 + object
+Question: Had + subject + V3 + object?
+
+Examples:
+- I had completed the update before the client called.
+- She had left before I reached the office.
+- We had not tested the page before publishing it.
+- Had you checked the code before uploading it?
+
+Timeline:
+First: I completed the update.
+Second: The client called.
+
+Combined:
+I had completed the update before the client called.
+
+
+8. PAST PERFECT CONTINUOUS TENSE
+--------------------------------
+Use:
+- An action that continued for some time before another past action
+- To emphasize the duration of a past activity
+
+Hindi पहचान:
+से कर रहा था, से काम कर रही थी
+
+Structure:
+Positive: Subject + had been + V1-ing + since/for
+Negative: Subject + had not been + V1-ing + since/for
+Question: Had + subject + been + V1-ing + since/for?
+
+Examples:
+- I had been working for three hours before the system stopped.
+- She had been testing the website since morning.
+- They had not been receiving orders for two days.
+- Had you been waiting for a long time before I arrived?
+
+
+9. SIMPLE FUTURE TENSE
+----------------------
+Use:
+- Future decisions
+- Promises and offers
+- Predictions
+- Actions that will happen in the future
+
+Hindi पहचान:
+करूँगा, करेगी, करेंगे
+
+Structure:
+Positive: Subject + will + V1 + object
+Negative: Subject + will not + V1 + object
+Question: Will + subject + V1 + object?
+
+Examples:
+- I will update the page tomorrow.
+- She will check the website.
+- We will not change the layout.
+- Will you review the changes?
+- I will fix the issue as soon as possible.
+
+“Going to” for plans or strong evidence:
+- I am going to update the product page tonight.
+- Look at those clouds. It is going to rain.
+
+
+10. FUTURE CONTINUOUS TENSE
+---------------------------
+Use:
+- An action that will be in progress at a specific future time
+- A polite question about someone’s future plan
+
+Hindi पहचान:
+कर रहा होऊँगा, कर रही होगी, कर रहे होंगे
+
+Structure:
+Positive: Subject + will be + V1-ing + object
+Negative: Subject + will not be + V1-ing + object
+Question: Will + subject + be + V1-ing + object?
+
+Examples:
+- I will be working on the website at 5 p.m.
+- She will be testing the feature tomorrow morning.
+- We will not be using the old design next week.
+- Will you be attending the meeting?
+
+
+11. FUTURE PERFECT TENSE
+------------------------
+Use:
+- An action that will be completed before a specific future time
+
+Hindi पहचान:
+कर चुका होऊँगा, कर चुकी होगी, कर चुके होंगे
+
+Structure:
+Positive: Subject + will have + V3 + object
+Negative: Subject + will not have + V3 + object
+Question: Will + subject + have + V3 + object?
+
+Examples:
+- I will have completed the update by 6 p.m.
+- She will have tested the website by tomorrow.
+- We will not have finished the project by Monday.
+- Will you have reviewed the page by tonight?
+
+Important:
+By 6 p.m. = completed before or at 6 p.m.
+
+
+12. FUTURE PERFECT CONTINUOUS TENSE
+-----------------------------------
+Use:
+- An action that will continue up to a specific point in the future
+- To emphasize future duration
+
+Hindi पहचान:
+से कर रहा होऊँगा, से काम कर रही होगी
+
+Structure:
+Positive: Subject + will have been + V1-ing + since/for
+Negative: Subject + will not have been + V1-ing + since/for
+Question: Will + subject + have been + V1-ing + since/for?
+
+Examples:
+- By 6 p.m., I will have been working for eight hours.
+- Next month, she will have been working here for two years.
+- Will you have been studying for three hours by 9 p.m.?
+
+
+QUICK COMPARISON
+================
+
+Present:
+- I update the website every day. (habit)
+- I am updating the website now. (happening now)
+- I have updated the website. (recently completed; result matters now)
+- I have been updating the website for two hours. (started earlier and still continuing)
+
+Past:
+- I updated the website yesterday. (completed past action)
+- I was updating the website at 5 p.m. (in progress at a past time)
+- I had updated the website before the meeting. (completed before another past action)
+- I had been updating the website for two hours before the meeting. (duration before another past action)
+
+Future:
+- I will update the website tomorrow. (future action)
+- I will be updating the website at 5 p.m. (in progress at a future time)
+- I will have updated the website by 6 p.m. (completed before a future time)
+- I will have been updating the website for two hours by 6 p.m. (duration up to a future time)
+
+
+IMPORTANT GRAMMAR RULES
+=======================
+
+1. Use of “a,” “an,” and “the”
+--------------------------------
+A:
+Use before a singular, non-specific noun beginning with a consonant sound.
+- I found a problem.
+- I added a banner.
+
+An:
+Use before a singular, non-specific noun beginning with a vowel sound.
+- I found an issue.
+- It took an hour.
+
+The:
+Use for a specific person, thing, place, or idea.
+- I fixed the issue you reported.
+- I updated the offers on the product page.
+- Please check the changes.
+
+First mention:
+- I found an issue.
+
+Second mention:
+- I fixed the issue.
+
+
+2. Use of “since” and “for”
+---------------------------
+Since + starting point:
+- since Monday
+- since morning
+- since 2024
+
+For + duration:
+- for two hours
+- for three days
+- for one year
+
+
+3. Use of “has” and “have”
+--------------------------
+Has: he, she, it, singular name
+- She has updated the page.
+
+Have: I, you, we, they
+- I have updated the page.
+- They have checked the website.
+
+
+4. Use of “do,” “does,” and “did”
+---------------------------------
+Do: I, you, we, they
+- Do you check the website daily?
+
+Does: he, she, it, singular name
+- Does she check the website daily?
+
+Did: all subjects in the past
+- Did they check the website yesterday?
+
+Always use V1 after do, does, or did.
+- Does he work here? Correct
+- Does he works here? Incorrect
+
+
+5. Common time words
+--------------------
+Simple Present:
+always, usually, often, sometimes, every day
+
+Present Continuous:
+now, right now, at the moment
+
+Present Perfect:
+already, just, yet, ever, never, recently
+
+Simple Past:
+yesterday, last week, ago, in 2025
+
+Future:
+tomorrow, next week, soon, later
+
+
+PRACTICE EXERCISES
+==================
+
+Fill in the blanks:
+
+1. I ______ the product page every day. (update)
+2. I ______ the product page right now. (update)
+3. I ______ the product page already. (update)
+4. I ______ the product page yesterday. (update)
+5. I ______ the product page tomorrow. (update)
+6. She ______ the issue before the client called. (fix)
+7. They ______ the website for two hours. (test)
+8. By 6 p.m., I ______ the work. (complete)
+
+Answers:
+
+1. update
+2. am updating
+3. have updated
+4. updated
+5. will update
+6. had fixed
+7. have been testing
+8. will have completed
+
+
+DAILY PROFESSIONAL SENTENCES
+============================
+
+- I’ve completed the requested changes.
+- I’m currently working on the issue.
+- I updated the page yesterday.
+- I’ll complete the update by this evening.
+- Please review the changes and share your feedback.
+- I’ve tested the feature on desktop and mobile devices.
+- The issue has been resolved.
+- I’ll let you know once the update is complete.
+- Could you please share a screenshot of the issue?
+- I had tested the feature before publishing the changes.

@@ -1,0 +1,972 @@
+ENGLISH GRAMMAR: STEP-BY-STEP LEARNING ROADMAP
+==============================================
+
+इस guide को beginner से advanced क्रम में बनाया गया है।
+हर step पूरा करने के बाद ही अगले step पर जाएँ।
+
+
+HOW TO STUDY EVERY DAY
+======================
+
+रोज 30–45 minutes इस तरह practice करें:
+
+1. 10 minutes: नया grammar rule समझें।
+2. 10 minutes: दिए गए examples पढ़ें और बोलें।
+3. 10 minutes: अपने 5–10 sentences लिखें।
+4. 5 minutes: sentences को negative और question में बदलें।
+5. 5 minutes: अपनी mistakes check करें।
+
+Golden rule:
+केवल rules याद न करें। हर rule से अपने daily work के sentences बनाएँ।
+
+Example:
+- I update the website.
+- I am updating the website.
+- I updated the website yesterday.
+- I will update the website tomorrow.
+
+
+COMPLETE LEARNING ORDER
+=======================
+
+Step 1: Sentence basics
+Step 2: Nouns
+Step 3: Pronouns
+Step 4: Articles
+Step 5: Verbs
+Step 6: Helping verbs
+Step 7: Subject–verb agreement
+Step 8: Adjectives
+Step 9: Adverbs
+Step 10: Prepositions
+Step 11: Conjunctions
+Step 12: Tenses
+Step 13: Questions and negatives
+Step 14: Modals
+Step 15: Imperatives
+Step 16: Gerunds and infinitives
+Step 17: Active and passive voice
+Step 18: Direct and indirect speech
+Step 19: Conditionals
+Step 20: Clauses and complex sentences
+Step 21: Punctuation and capitalization
+Step 22: Professional writing practice
+
+
+STEP 1: SENTENCE BASICS
+=======================
+
+पहले समझें कि एक basic English sentence कैसे बनता है।
+
+Basic structure:
+Subject + Verb + Object
+
+Subject:
+काम करने वाला व्यक्ति या वस्तु।
+
+Verb:
+Action या state बताने वाला word।
+
+Object:
+जिस व्यक्ति या वस्तु पर action होता है।
+
+Example:
+I update the website.
+
+Subject: I
+Verb: update
+Object: the website
+
+More examples:
+- She checks the orders.
+- Rahul fixed the issue.
+- We tested the feature.
+
+Practice:
+इन subjects से sentences बनाएँ:
+I, you, he, she, we, they
+
+
+STEP 2: NOUNS
+=============
+
+Noun किसी person, place, thing, animal या idea का नाम होता है।
+
+Examples:
+- Person: developer, customer, Rahul
+- Place: office, Delhi, website
+- Thing: laptop, page, image
+- Animal: dog, cat
+- Idea: honesty, happiness, freedom
+
+Types of nouns:
+
+1. Common noun:
+General name
+- developer
+- city
+- website
+
+2. Proper noun:
+Specific name; capital letter से शुरू होता है।
+- Rahul
+- Delhi
+- Shopify
+
+3. Countable noun:
+जिन्हें count कर सकते हैं।
+- one page, two pages
+- one image, five images
+
+4. Uncountable noun:
+जिन्हें सामान्य रूप से count नहीं करते।
+- information
+- advice
+- water
+- work
+
+Common mistakes:
+Incorrect: Please share an information.
+Correct: Please share some information.
+
+Incorrect: He gave me an advice.
+Correct: He gave me some advice.
+Correct: He gave me a piece of advice.
+
+Practice:
+अपने आसपास के 10 nouns लिखें और common/proper या countable/uncountable बताएँ।
+
+
+STEP 3: PRONOUNS
+================
+
+Pronoun noun की जगह उपयोग होता है ताकि noun बार-बार repeat न हो।
+
+Subject pronouns:
+I, you, he, she, it, we, they
+
+Object pronouns:
+me, you, him, her, it, us, them
+
+Possessive adjectives:
+my, your, his, her, its, our, their
+
+Possessive pronouns:
+mine, yours, his, hers, ours, theirs
+
+Examples:
+- Rahul is a developer. He works on websites.
+- I called Priya. I asked her about the issue.
+- This is my laptop.
+- This laptop is mine.
+
+Common mistake:
+Incorrect: Me updated the page.
+Correct: I updated the page.
+
+Practice:
+नाम को pronoun से replace करें:
+- Rahul checked the website.
+- Priya sent the screenshots.
+- The customers placed the orders.
+
+
+STEP 4: ARTICLES — A, AN, THE
+=============================
+
+A:
+एक non-specific singular noun के पहले, consonant sound के साथ।
+- a page
+- a website
+- a user
+
+An:
+एक non-specific singular noun के पहले, vowel sound के साथ।
+- an image
+- an issue
+- an hour
+
+The:
+किसी specific या पहले से known noun के पहले।
+- the issue you reported
+- the product page
+- the changes
+
+First mention:
+- I found an issue.
+
+Second mention:
+- I fixed the issue.
+
+Common mistakes:
+Incorrect: I updated offers on product page.
+Correct: I updated the offers on the product page.
+
+Incorrect: I found a issue.
+Correct: I found an issue.
+
+Practice:
+रिक्त स्थान में a, an या the लगाएँ:
+1. I found ___ error.
+2. Please check ___ error I reported.
+3. She added ___ banner.
+4. He completed the work in ___ hour.
+
+Answers:
+1. an
+2. the
+3. a
+4. an
+
+
+STEP 5: VERBS
+=============
+
+Verb action या state बताता है।
+
+Action verbs:
+work, update, fix, check, write, test
+
+State verbs:
+be, know, understand, like, need, believe
+
+Verb forms:
+
+V1: update
+V2: updated
+V3: updated
+V-ing: updating
+
+Irregular verb example:
+
+V1: write
+V2: wrote
+V3: written
+V-ing: writing
+
+More irregular verbs:
+go – went – gone
+see – saw – seen
+do – did – done
+take – took – taken
+give – gave – given
+come – came – come
+
+Practice:
+रोज 5 verbs की चारों forms लिखें।
+
+
+STEP 6: HELPING VERBS
+=====================
+
+Helping verbs main verb को tense, question या negative बनाने में सहायता करते हैं।
+
+Be forms:
+am, is, are, was, were
+
+Have forms:
+have, has, had
+
+Do forms:
+do, does, did
+
+Future:
+will
+
+Examples:
+- I am working.
+- She is checking the page.
+- They have completed the work.
+- He does not understand the issue.
+- Did you test the page?
+- I will update it tomorrow.
+
+Important:
+Do/does/did के बाद V1 आता है।
+
+Incorrect: Did you checked it?
+Correct: Did you check it?
+
+
+STEP 7: SUBJECT–VERB AGREEMENT
+==============================
+
+Simple Present में he, she, it या singular name के साथ verb में s/es लगता है।
+
+- I work.
+- You work.
+- We work.
+- They work.
+- He works.
+- She works.
+- Rahul works.
+
+Examples:
+- The customer wants an update.
+- The customers want an update.
+- She checks the orders daily.
+- They check the orders daily.
+
+Common mistakes:
+Incorrect: He work on websites.
+Correct: He works on websites.
+
+Incorrect: They works on websites.
+Correct: They work on websites.
+
+
+STEP 8: ADJECTIVES
+==================
+
+Adjective noun या pronoun की quality बताता है।
+
+Examples:
+- a fast website
+- a beautiful design
+- an important update
+- a large image
+- the mobile menu
+
+Sentence examples:
+- The website is fast.
+- This is an important issue.
+- She created a beautiful design.
+
+Order:
+Adjective सामान्य रूप से noun के पहले आता है।
+
+Adjective + noun:
+- a professional message
+- a responsive layout
+
+Be verb + adjective:
+- The message is professional.
+- The layout is responsive.
+
+Comparison:
+
+Positive:
+fast
+
+Comparative:
+faster
+- This website is faster than the old website.
+
+Superlative:
+fastest
+- This is the fastest version.
+
+More examples:
+good – better – best
+bad – worse – worst
+easy – easier – easiest
+beautiful – more beautiful – most beautiful
+
+Common mistake:
+Incorrect: This design is more better.
+Correct: This design is better.
+
+
+STEP 9: ADVERBS
+================
+
+Adverb verb, adjective या दूसरे adverb के बारे में अधिक जानकारी देता है।
+
+Adverb of manner — action कैसे हुआ:
+- quickly
+- carefully
+- clearly
+- professionally
+
+Examples:
+- The page loads quickly.
+- Please check the code carefully.
+- Explain the issue clearly.
+
+Adverb of frequency — action कितनी बार होता है:
+- always
+- usually
+- often
+- sometimes
+- rarely
+- never
+
+Examples:
+- I usually check the website in the morning.
+- She always tests the mobile view.
+
+Adverb of time:
+- now
+- today
+- yesterday
+- soon
+- later
+
+Adverb of degree:
+- very
+- quite
+- too
+- almost
+
+Examples:
+- The page is very slow.
+- The image is too large.
+
+Adjective vs adverb:
+- She is a careful developer. (careful describes developer)
+- She checks the code carefully. (carefully describes checks)
+
+Common mistake:
+Incorrect: The page loads quick.
+Correct: The page loads quickly.
+
+
+STEP 10: PREPOSITIONS
+=====================
+
+Prepositions time, place, position या direction का relation बताते हैं।
+
+Time:
+
+At:
+- at 5 p.m.
+- at night
+
+On:
+- on Monday
+- on 28 July
+
+In:
+- in July
+- in 2026
+- in the morning
+
+Place:
+
+At:
+- at the office
+- at home
+
+On:
+- on the page
+- on the website
+- on the table
+
+In:
+- in the file
+- in the folder
+- in Delhi
+
+Other useful prepositions:
+- from the client
+- to the customer
+- with the team
+- for two hours
+- since Monday
+- before the meeting
+- after lunch
+- between two sections
+
+Common professional examples:
+- I updated the offers on the product page.
+- The code is in the file.
+- I received a message from the client.
+- Please share the details with the developer.
+
+
+STEP 11: CONJUNCTIONS
+=====================
+
+Conjunctions words या sentences को जोड़ते हैं।
+
+And:
+दो similar ideas जोड़ता है।
+- I checked the page and fixed the issue.
+
+But:
+Contrast दिखाता है।
+- The design looks good, but the page is slow.
+
+Or:
+Choice दिखाता है।
+- Please send a screenshot or a video.
+
+Because:
+Reason बताता है।
+- The image is slow because the file is large.
+
+So:
+Result बताता है।
+- The file was large, so I compressed it.
+
+Although:
+Unexpected contrast।
+- Although the file is large, it loads quickly.
+
+If:
+Condition।
+- If you approve the design, I will publish it.
+
+
+STEP 12: TENSES
+===============
+
+Tenses सीखने का सही क्रम:
+
+1. Simple Present
+2. Present Continuous
+3. Simple Past
+4. Simple Future
+5. Present Perfect
+6. Past Continuous
+7. Present Perfect Continuous
+8. Past Perfect
+9. Future Continuous
+10. Past Perfect Continuous
+11. Future Perfect
+12. Future Perfect Continuous
+
+चार सबसे जरूरी tenses पहले सीखें:
+
+Simple Present:
+- I update the website every day.
+
+Present Continuous:
+- I am updating the website now.
+
+Simple Past:
+- I updated the website yesterday.
+
+Simple Future:
+- I will update the website tomorrow.
+
+इसके बाद:
+
+Present Perfect:
+- I have updated the website.
+
+Complete tense details के लिए पढ़ें:
+english-grammar-tenses.txt
+
+
+STEP 13: NEGATIVE SENTENCES AND QUESTIONS
+==========================================
+
+Simple Present:
+- I work here.
+- I do not work here.
+- Do you work here?
+
+With he/she/it:
+- She works here.
+- She does not work here.
+- Does she work here?
+
+Simple Past:
+- I updated the page.
+- I did not update the page.
+- Did you update the page?
+
+Present Continuous:
+- I am checking the website.
+- I am not checking the website.
+- Are you checking the website?
+
+Present Perfect:
+- I have completed the work.
+- I have not completed the work.
+- Have you completed the work?
+
+Future:
+- I will update the page.
+- I will not update the page.
+- Will you update the page?
+
+
+STEP 14: MODAL VERBS
+====================
+
+Modal + V1
+
+Can:
+Ability या permission
+- I can fix the issue.
+- Can I update the page?
+
+Could:
+Past ability या polite request
+- Could you share a screenshot?
+
+May:
+Formal permission या possibility
+- May I publish the changes?
+- It may take some time.
+
+Might:
+Weak possibility
+- The update might cause an issue.
+
+Should:
+Advice
+- You should compress the image.
+
+Must:
+Strong necessity
+- We must test the payment page.
+
+Would:
+Polite request या imagined situation
+- Would you please review the changes?
+- I would update it if I had access.
+
+Common mistake:
+Incorrect: I can fixed it.
+Correct: I can fix it.
+
+
+STEP 15: IMPERATIVES
+====================
+
+Imperative sentence instruction, request या command देता है।
+Subject “you” समझा जाता है और लिखा नहीं जाता।
+
+Examples:
+- Check the website.
+- Please review the changes.
+- Send me a screenshot.
+- Do not publish the page yet.
+
+Polite forms:
+- Please check the changes.
+- Could you please check the changes?
+- Please let me know if you need any revisions.
+
+
+STEP 16: GERUNDS AND INFINITIVES
+================================
+
+Gerund:
+Verb + ing noun की तरह उपयोग होता है।
+
+- Testing is important.
+- I enjoy learning English.
+- Thank you for checking the page.
+
+Infinitive:
+To + V1
+
+- I want to learn English.
+- I need to update the page.
+- She plans to test the website.
+
+Common patterns:
+- enjoy + ing
+- avoid + ing
+- finish + ing
+- want + to + V1
+- need + to + V1
+- plan + to + V1
+
+Incorrect: I enjoy to learn English.
+Correct: I enjoy learning English.
+
+
+STEP 17: ACTIVE AND PASSIVE VOICE
+=================================
+
+Active voice:
+Subject action करता है।
+
+- I updated the page.
+
+Passive voice:
+Action या result पर focus होता है।
+
+- The page was updated by me.
+- The issue has been resolved.
+
+Structure:
+Object + correct form of “be” + V3
+
+Examples:
+- I fixed the issue. (active)
+- The issue was fixed. (passive)
+
+- The developer has updated the website. (active)
+- The website has been updated. (passive)
+
+Professional messages में passive useful है:
+- The requested changes have been completed.
+- The issue has been resolved.
+
+
+STEP 18: DIRECT AND INDIRECT SPEECH
+===================================
+
+Direct speech:
+Exact words quotation marks में।
+
+- The client said, “Please update the page.”
+
+Indirect speech:
+Meaning report किया जाता है।
+
+- The client asked me to update the page.
+
+More examples:
+- He said, “I am busy.”
+- He said that he was busy.
+
+- She said, “I have completed the work.”
+- She said that she had completed the work.
+
+
+STEP 19: CONDITIONAL SENTENCES
+==============================
+
+Zero Conditional:
+General truth
+
+If + Simple Present, Simple Present
+- If an image is large, it loads slowly.
+
+First Conditional:
+Real future possibility
+
+If + Simple Present, will + V1
+- If you approve the design, I will publish it.
+
+Second Conditional:
+Imaginary or unlikely present/future situation
+
+If + Simple Past, would + V1
+- If I had access, I would fix the issue.
+
+Third Conditional:
+Imaginary past situation
+
+If + Past Perfect, would have + V3
+- If I had known about the issue, I would have fixed it earlier.
+
+
+STEP 20: CLAUSES AND COMPLEX SENTENCES
+======================================
+
+Independent clause:
+अकेले complete sentence बन सकता है।
+
+- I fixed the issue.
+
+Dependent clause:
+अकेले complete meaning नहीं देता।
+
+- because the image was large
+
+Combined sentence:
+- I compressed the image because it was large.
+
+Relative clauses:
+
+Who — person:
+- The developer who fixed the issue is available.
+
+Which — thing:
+- The image which you shared is too large.
+
+That — person or thing:
+- This is the page that I updated.
+
+Where — place:
+- This is the section where the error appears.
+
+
+STEP 21: PUNCTUATION AND CAPITALIZATION
+=======================================
+
+Capital letter:
+- Sentence के पहले word में
+- Person, city, country और brand names में
+- “I” हमेशा capital होता है
+
+Correct:
+- I work with Rahul in Delhi.
+
+Full stop (.):
+Statement के अंत में।
+- I have completed the update.
+
+Question mark (?):
+Question के अंत में।
+- Have you checked the update?
+
+Comma (,):
+List या clauses अलग करने के लिए।
+- I checked the layout, images, buttons, and links.
+- After testing the page, I published it.
+
+Apostrophe (’):
+Short forms या possession में।
+- I’ve completed the work.
+- Rahul’s laptop
+
+Common mistake:
+Incorrect: ive updated the page
+Correct: I’ve updated the page.
+
+
+STEP 22: PROFESSIONAL WRITING
+=============================
+
+Professional message structure:
+
+1. बताइए कि आपने क्या किया।
+2. User से क्या action चाहिए, वह बताइए।
+3. Further help offer कीजिए।
+
+Example:
+I’ve updated the offers on the product page. Please review the changes and let me know if any further revisions are needed.
+
+Reporting an issue:
+I found an issue with the mobile menu. It does not display all menu items on smaller screens. I’m currently working on a fix.
+
+Asking for details:
+Could you please share a screenshot or screen recording of the issue? This will help me identify and resolve it more quickly.
+
+Giving an update:
+I’ve fixed the issue and tested the page on desktop and mobile devices. Please check it on your end and share your feedback.
+
+
+12-WEEK STUDY PLAN
+==================
+
+Week 1:
+- Sentence structure
+- Nouns
+- Pronouns
+
+Week 2:
+- Articles
+- Verbs and verb forms
+
+Week 3:
+- Helping verbs
+- Subject–verb agreement
+
+Week 4:
+- Adjectives
+- Adverbs
+
+Week 5:
+- Prepositions
+- Conjunctions
+
+Week 6:
+- Simple Present
+- Present Continuous
+
+Week 7:
+- Simple Past
+- Past Continuous
+
+Week 8:
+- Simple Future
+- Present Perfect
+
+Week 9:
+- Remaining perfect and continuous tenses
+
+Week 10:
+- Questions
+- Negatives
+- Modal verbs
+
+Week 11:
+- Active/passive voice
+- Direct/indirect speech
+- Conditionals
+
+Week 12:
+- Clauses
+- Punctuation
+- Professional writing practice
+
+
+DAILY PRACTICE TEMPLATE
+=======================
+
+आज का topic:
+
+Rule:
+
+My five positive sentences:
+1.
+2.
+3.
+4.
+5.
+
+My three negative sentences:
+1.
+2.
+3.
+
+My three questions:
+1.
+2.
+3.
+
+New words:
+1.
+2.
+3.
+4.
+5.
+
+Mistakes I corrected today:
+1.
+2.
+3.
+
+
+BEGINNER PRACTICE
+=================
+
+Sentence 1:
+मैं हर दिन website check करता हूँ।
+Answer: I check the website every day.
+
+Sentence 2:
+मैं अभी product page update कर रहा हूँ।
+Answer: I am updating the product page now.
+
+Sentence 3:
+मैंने कल issue fix किया।
+Answer: I fixed the issue yesterday.
+
+Sentence 4:
+मैंने changes complete कर दिए हैं।
+Answer: I have completed the changes.
+
+Sentence 5:
+मैं कल mobile view test करूँगा।
+Answer: I will test the mobile view tomorrow.
+
+
+FINAL ADVICE
+============
+
+इस क्रम से शुरू करें:
+
+1. पहले Subject + Verb + Object समझें।
+2. Noun और pronoun सीखें।
+3. Verb forms याद करें।
+4. Helping verbs और subject–verb agreement सीखें।
+5. Articles, adjectives, adverbs और prepositions सीखें।
+6. पहले चार basic tenses सीखें।
+7. Negative और question sentences बनाएँ।
+8. बाकी tenses और advanced grammar धीरे-धीरे सीखें।
+9. रोज अपने काम से जुड़े 10 English sentences लिखें।
+10. हर mistake का सही sentence अपनी notes file में save करें।
+
+सबसे महत्वपूर्ण:
+रोज थोड़ा पढ़ना और लिखना, एक दिन में बहुत सारे rules पढ़ने से बेहतर है।

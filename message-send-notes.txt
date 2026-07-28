@@ -1,0 +1,18 @@
+1. I’ve tested it on my end. Please check it and let me know what issue you’re experiencing. I’ll make the necessary updates accordingly.
+2. Sir, I’ve manually updated the collections. Please review them and let me know if any further changes are needed.
+3. I’ve made the update. Please check it and let me know if any further changes are needed.
+4. I’ve updated the offers on the product page. Please review them and let me know if any further changes are needed.
+
+Grammar explanation:
+- “I’ve” is the short form of “I have.”
+- “I have updated” is in the present perfect tense. It shows that the work was completed recently and the result is relevant now.
+- We use “the offers” because we are referring to specific offers.
+- We use “the product page” because we are referring to a specific page.
+
+Incorrect: I’ve updated offers on product page.
+Correct: I’ve updated the offers on the product page.
+
+Examples:
+- I’ve updated the product images on the collection page.
+- I’ve added the discount information to the product page.
+- I’ve fixed the layout on the mobile product page.

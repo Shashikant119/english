@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read English learning notes in a clean and accessible format.">
+  <title>English Notes Reader</title>
+  <style>
+    :root {
+      --ink: #182033;
+      --muted: #667085;
+      --page: #f5f7fb;
+      --card: #fff;
+      --line: #e3e7ef;
+      --primary: #3157d5;
+      --primary-dark: #203fae;
+      --soft: #edf2ff;
+      --shadow: 0 20px 55px rgba(27, 42, 79, .09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+    }
+
+    .topbar {
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, .9);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .topbar-inner {
+      align-items: center;
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+      margin: auto;
+      max-width: 1040px;
+      min-height: 68px;
+      padding: 10px 20px;
+    }
+
+    .back-link {
+      align-items: center;
+      color: var(--primary);
+      display: inline-flex;
+      font-weight: 800;
+      gap: 7px;
+      text-decoration: none;
+    }
+
+    .controls {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+
+    .control {
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      font: 750 15px/1 system-ui, sans-serif;
+      height: 38px;
+      justify-content: center;
+      min-width: 38px;
+      padding: 0 11px;
+    }
+
+    .control:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      margin: auto;
+      max-width: 1040px;
+      padding: 38px 20px 70px;
+    }
+
+    .document-head {
+      margin-bottom: 22px;
+    }
+
+    .document-label {
+      background: var(--soft);
+      border-radius: 999px;
+      color: var(--primary-dark);
+      display: inline-flex;
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .06em;
+      padding: 6px 10px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      letter-spacing: -.035em;
+      line-height: 1.12;
+      margin: 14px 0 8px;
+    }
+
+    .filename {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .reader {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.82;
+      margin: 0;
+      min-height: 280px;
+      overflow-wrap: anywhere;
+      padding: clamp(22px, 5vw, 52px);
+      white-space: pre-wrap;
+    }
+
+    .reader.is-loading {
+      color: var(--muted);
+    }
+
+    .error {
+      background: #fff1f0;
+      border-color: #ffc8c4;
+      color: #a52a22;
+    }
+
+    .progress {
+      background: var(--primary);
+      height: 3px;
+      left: 0;
+      position: fixed;
+      top: 0;
+      transform-origin: left;
+      width: 100%;
+      z-index: 20;
+    }
+
+    .file-navigation {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 22px;
+    }
+
+    .file-navigation a {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 750;
+      padding: 12px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .file-navigation a:hover,
+    .file-navigation a[aria-current="page"] {
+      background: var(--soft);
+      border-color: rgba(49, 87, 213, .35);
+      color: var(--primary);
+    }
+
+    @media (max-width: 700px) {
+      .topbar-inner {
+        min-height: 60px;
+      }
+
+      main {
+        padding-top: 26px;
+      }
+
+      .reader {
+        border-radius: 14px;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .file-navigation {
+        grid-template-columns: 1fr;
+      }
+
+      .control-text {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="back-link" href="index.html">← <span>Roadmap</span></a>
+      <div class="controls" aria-label="Reading controls">
+        <button class="control" id="fontDown" type="button" aria-label="Decrease font size">A−</button>
+        <button class="control" id="fontUp" type="button" aria-label="Increase font size">A+</button>
+        <button class="control" id="topButton" type="button" aria-label="Back to top">↑ <span class="control-text">Top</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="document-head">
+      <span class="document-label">English learning note</span>
+      <h1 id="title">Loading note…</h1>
+      <p class="filename" id="filename"></p>
+    </div>
+
+    <pre class="reader is-loading" id="reader" tabindex="0">Loading content…</pre>
+
+    <nav class="file-navigation" id="fileNavigation" aria-label="All learning notes"></nav>
+  </main>
+
+  <script>
+    (() => {
+      const files = [
+        {
+          file: 'english-word-reading-pronunciation-guide.txt',
+          title: 'Reading and Pronunciation'
+        },
+        {
+          file: 'english-grammar-step-by-step-roadmap.txt',
+          title: 'Grammar Learning Roadmap'
+        },
+        {
+          file: 'english-grammar-tenses.txt',
+          title: 'Complete Tense Guide'
+        },
+        {
+          file: 'Vocabulary.txt',
+          title: 'Vocabulary'
+        },
+        {
+          file: 'Notes.txt',
+          title: 'Daily Notes'
+        },
+        {
+          file: 'message-send-notes.txt',
+          title: 'Professional Messages'
+        },
+        {
+          file: 'README.md',
+          title: 'Project Guide'
+        }
+      ];
+
+      const params = new URLSearchParams(window.location.search);
+      const requestedFile = params.get('file') || files[0].file;
+      const selected = files.find(item => item.file === requestedFile);
+      const reader = document.getElementById('reader');
+      const title = document.getElementById('title');
+      const filename = document.getElementById('filename');
+      const navigation = document.getElementById('fileNavigation');
+      const progress = document.getElementById('progress');
+      let fontSize = Number(localStorage.getItem('english-reader-font-size') || 17);
+
+      const applyFontSize = () => {
+        fontSize = Math.min(26, Math.max(14, fontSize));
+        reader.style.fontSize = `${fontSize}px`;
+        localStorage.setItem('english-reader-font-size', String(fontSize));
+      };
+
+      files.forEach(item => {
+        const link = document.createElement('a');
+        link.href = `reader.html?file=${encodeURIComponent(item.file)}`;
+        link.textContent = item.title;
+        if (selected && item.file === selected.file) link.setAttribute('aria-current', 'page');
+        navigation.appendChild(link);
+      });
+
+      if (!selected) {
+        title.textContent = 'Note not found';
+        filename.textContent = requestedFile;
+        reader.textContent = 'This file is not part of the English learning roadmap. Please return to the homepage and select a valid note.';
+        reader.classList.remove('is-loading');
+        reader.classList.add('error');
+      } else {
+        document.title = `${selected.title} | English Notes`;
+        title.textContent = selected.title;
+        filename.textContent = selected.file;
+
+        fetch(selected.file)
+          .then(response => {
+            if (!response.ok) throw new Error(`Unable to load this note (${response.status}).`);
+            return response.text();
+          })
+          .then(content => {
+            reader.textContent = content;
+            reader.classList.remove('is-loading');
+          })
+          .catch(error => {
+            reader.textContent = `${error.message}\n\nRun this project through the local server instead of opening reader.html directly.`;
+            reader.classList.remove('is-loading');
+            reader.classList.add('error');
+          });
+      }
+
+      document.getElementById('fontDown').addEventListener('click', () => {
+        fontSize -= 1;
+        applyFontSize();
+      });
+
+      document.getElementById('fontUp').addEventListener('click', () => {
+        fontSize += 1;
+        applyFontSize();
+      });
+
+      document.getElementById('topButton').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const value = scrollable > 0 ? window.scrollY / scrollable : 0;
+        progress.style.transform = `scaleX(${Math.min(1, Math.max(0, value))})`;
+      };
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress, { passive: true });
+      applyFontSize();
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
