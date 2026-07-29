@@ -20,3 +20,14 @@ Examples:
 ---------------------
 
 5. I’ve updated the product page so that the 1 kg variant is selected by default. Please review it and let me know if any further changes are needed.
+
+6. Thank you for sharing this opportunity with me. Before we proceed with the interview, I would like to learn a little more about the company and the position. Could you please share the following details?
+
+   1. How many people currently work in the company?
+   2. What position are you currently hiring for?
+   3. What are the main responsibilities and required skills for this position?
+   4. Which team or department is this position part of?
+   5. What are the working hours, weekly days off, and job location?
+   6. What is the expected salary range for this position?
+
+Thank you. These details will help me understand the opportunity better before the interview.

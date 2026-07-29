@@ -1,0 +1,15 @@
+Professional Introduction
+
+Hello, my name is Shashikant Verma. I am a Software Developer with over six years of professional experience in web development, e-commerce, and server management.
+
+I currently work at CuriousApe, and before that, I worked at The Wellness Shop for three years. Throughout my career, I have completed more than 70 projects, primarily for Shopify stores in the clothing, fashion, wellness, and other e-commerce industries.
+
+My technical skills include HTML, CSS, Bootstrap, JavaScript, jQuery, PHP, and Laravel. I also have basic experience with React. I specialize in Shopify development, including Liquid, schema configuration, custom theme development, theme customization, and custom Shopify applications.
+
+I have experience managing and deploying websites on AWS, DigitalOcean, Hostinger, and GoDaddy. For database development and management, I work with MySQL and MySQL Workbench.
+
+I graduated from Government Engineering College, Bharatpur, in 2019.
+
+I enjoy solving technical problems, developing reliable e-commerce solutions, and learning new technologies. With my Shopify expertise and full-stack development experience, I am confident in my ability to contribute effectively to a development team and deliver high-quality solutions.
+
+Thank you for giving me the opportunity to introduce myself.
