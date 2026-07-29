@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vidhan Sabha and Vidhan Parishad explained with image.">
+  <title>Vidhan Sabha vs Vidhan Parishad</title>
+  <style>
+    :root {
+      --ink: #172036;
+      --muted: #667085;
+      --page: #f6f8fc;
+      --card: #ffffff;
+      --line: #e4e8f0;
+      --primary: #3157d5;
+      --soft-blue: #edf2ff;
+      --shadow: 0 18px 45px rgba(28, 42, 78, .09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 10% 0%, rgba(49, 87, 213, .12), transparent 28rem),
+        var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .container {
+      margin-inline: auto;
+      max-width: 1120px;
+      padding-inline: 20px;
+    }
+
+    header {
+      padding: 52px 0 24px;
+    }
+
+    .back-link {
+      color: var(--primary);
+      display: inline-flex;
+      font-weight: 800;
+      margin-bottom: 22px;
+      text-decoration: none;
+    }
+
+    .eyebrow {
+      background: var(--soft-blue);
+      border: 1px solid rgba(49, 87, 213, .18);
+      border-radius: 999px;
+      color: #203eaa;
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      padding: 7px 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      letter-spacing: -.04em;
+      line-height: 1.05;
+      margin: 18px 0 12px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+      max-width: 780px;
+    }
+
+    main {
+      padding: 18px 0 70px;
+    }
+
+    .image-card,
+    .explain-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .image-card img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .explain-card {
+      margin-top: 18px;
+      padding: clamp(22px, 4vw, 34px);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .summary {
+      background: var(--soft-blue);
+      border-radius: 14px;
+      margin-top: 22px;
+      padding: 18px;
+    }
+
+    .summary p {
+      margin: 0;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        padding-top: 38px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="back-link" href="index.html">← Back to Politics List</a>
+      <br>
+      <span class="eyebrow">Indian Polity</span>
+      <h1>Vidhan Sabha vs Vidhan Parishad</h1>
+      <p class="intro">State legislature ka simple difference: Vidhan Sabha directly people se elect hoti hai, aur Vidhan Parishad review/advice ke liye upper house hota hai.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <figure class="image-card">
+        <img src="assets/vidhan-sabha-vs-vidhan-parishad.png" alt="Infographic explaining Vidhan Sabha and Vidhan Parishad">
+      </figure>
+
+      <section class="explain-card">
+        <div class="grid">
+          <div>
+            <h2>Vidhan Sabha</h2>
+            <ul>
+              <li>Isko Legislative Assembly bhi bolte hain.</li>
+              <li>Members ko MLA kehte hain.</li>
+              <li>MLA direct public vote se elect hote hain.</li>
+              <li>State government usually Vidhan Sabha majority se banti hai.</li>
+              <li>Term normally 5 years hoti hai, lekin dissolve ho sakti hai.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Vidhan Parishad</h2>
+            <ul>
+              <li>Isko Legislative Council bhi bolte hain.</li>
+              <li>Members ko MLC kehte hain.</li>
+              <li>MLC indirect election/nomination se aate hain.</li>
+              <li>Ye bills ko review karta hai aur suggestions deta hai.</li>
+              <li>Ye permanent house hota hai; one-third members har 2 saal retire hote hain.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="summary">
+          <p><strong>Easy memory:</strong> Vidhan Sabha = public ka direct house. Vidhan Parishad = review/advice wala upper house, jo sirf kuch states mein hota hai.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
