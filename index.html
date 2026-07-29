@@ -91,6 +91,111 @@
       margin-top: 30px;
     }
 
+    .search-panel {
+      background: rgba(255, 255, 255, .88);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin-top: 30px;
+      max-width: 900px;
+      padding: 16px;
+    }
+
+    .search-box {
+      align-items: center;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+    }
+
+    .search-input {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      font: 600 16px/1.4 inherit;
+      min-height: 48px;
+      outline: none;
+      padding: 10px 14px;
+      width: 100%;
+    }
+
+    .search-input:focus {
+      border-color: rgba(49, 87, 213, .65);
+      box-shadow: 0 0 0 4px rgba(49, 87, 213, .12);
+    }
+
+    .search-icon-button {
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      font: 850 16px/1 inherit;
+      height: 48px;
+      justify-content: center;
+      min-width: 48px;
+      padding: 0 13px;
+    }
+
+    .search-icon-button:hover,
+    .search-icon-button.is-listening {
+      background: var(--soft-blue);
+      border-color: rgba(49, 87, 213, .45);
+      color: var(--primary);
+    }
+
+    .search-status {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 2px 0;
+      min-height: 18px;
+    }
+
+    .search-results {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .search-result {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      display: block;
+      padding: 13px 14px;
+      text-decoration: none;
+      transition: border-color 150ms ease, transform 150ms ease;
+    }
+
+    .search-result:hover {
+      border-color: rgba(49, 87, 213, .5);
+      transform: translateY(-1px);
+    }
+
+    .search-result strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .search-result span {
+      color: var(--muted);
+      display: block;
+      font-size: 13px;
+      line-height: 1.55;
+      margin-top: 4px;
+    }
+
+    .search-result mark {
+      background: #fff1a8;
+      border-radius: 4px;
+      color: inherit;
+      padding: 0 2px;
+    }
+
     .button {
       align-items: center;
       border: 1px solid var(--line);
@@ -329,6 +434,19 @@
       .daily-plan {
         grid-template-columns: 1fr;
       }
+
+      .search-panel {
+        border-radius: 14px;
+      }
+
+      .search-box {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .search-icon-button.clear-search {
+        grid-column: 1 / -1;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -344,6 +462,16 @@
         <a class="button button-secondary" href="reader.html?file=professional-introduction.txt">My Introduction</a>
         <a class="button button-secondary" href="reader.html?file=README.md">Project guide</a>
       </div>
+
+      <section class="search-panel" aria-label="Search all English notes">
+        <div class="search-box">
+          <input class="search-input" id="siteSearch" type="search" placeholder="Search all English notes..." autocomplete="off">
+          <button class="search-icon-button" id="voiceSearch" type="button" aria-label="Voice search" title="Voice search">Mic</button>
+          <button class="search-icon-button clear-search" id="clearSearch" type="button" aria-label="Clear search" title="Clear search">Clear</button>
+        </div>
+        <div class="search-status" id="searchStatus">Type any word, name, birthday, grammar topic, or speak with voice search.</div>
+        <div class="search-results" id="searchResults" aria-live="polite"></div>
+      </section>
     </div>
   </header>
 
@@ -511,5 +639,166 @@
   <footer>
     <div class="container">Keep learning a little every day.</div>
   </footer>
+  <script>
+    (() => {
+      const searchableFiles = [
+        { file: 'project-roadmap/README.md', title: 'Shopify AI Agents Project Roadmap' },
+        { file: 'project-roadmap/01-shopify-whatsapp-agent.md', title: 'Agent 1: Shopify and WhatsApp' },
+        { file: 'project-roadmap/02-google-lead-research-agent.md', title: 'Agent 2: Google Lead Research' },
+        { file: 'project-roadmap/03-build-plan-and-checklist.md', title: 'AI Agents Build Plan' },
+        { file: 'project-roadmap/04-data-model-prompts-and-stop-controls.md', title: 'Data Model and Agent Controls' },
+        { file: 'english-word-reading-pronunciation-guide.txt', title: 'Reading and Pronunciation' },
+        { file: 'english-grammar-step-by-step-roadmap.txt', title: 'Grammar Learning Roadmap' },
+        { file: 'english-grammar-tenses.txt', title: 'Complete Tense Guide' },
+        { file: 'Vocabulary.txt', title: 'Vocabulary' },
+        { file: 'verb-forms-v1-v2-v3.txt', title: 'Verb Forms: V1, V2 and V3' },
+        { file: 'english-stories-vocabulary-practice.txt', title: 'English Stories and Vocabulary' },
+        { file: 'Notes.txt', title: 'Daily English Notes' },
+        { file: 'message-send-notes.txt', title: 'Professional Messages' },
+        { file: 'english-learning-stories.txt', title: 'English Learning Stories' },
+        { file: 'professional-introduction.txt', title: 'My Professional Introduction' },
+        { file: 'politics/bjp-karyakarta-name-birthday-post-list.txt', title: 'BJP Karyakarta Name, Birthday and Post List' },
+        { file: 'politics/vidhan-sabha-vidhan-parishad.html', title: 'Vidhan Sabha and Vidhan Parishad', url: 'politics/vidhan-sabha-vidhan-parishad.html' },
+        { file: 'README.md', title: 'Project Guide' }
+      ];
+
+      const input = document.getElementById('siteSearch');
+      const voiceButton = document.getElementById('voiceSearch');
+      const clearButton = document.getElementById('clearSearch');
+      const status = document.getElementById('searchStatus');
+      const results = document.getElementById('searchResults');
+      let searchIndex = [];
+      let loadingPromise = null;
+
+      const escapeHtml = value => value.replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      }[char]));
+
+      const cleanText = value => value
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      const loadSearchIndex = () => {
+        if (loadingPromise) return loadingPromise;
+        status.textContent = 'Loading searchable notes...';
+        loadingPromise = Promise.all(searchableFiles.map(item =>
+          fetch(item.file)
+            .then(response => response.ok ? response.text() : '')
+            .catch(() => '')
+            .then(content => ({ ...item, content: item.file.endsWith('.html') ? cleanText(content) : content }))
+        )).then(items => {
+          searchIndex = items.filter(item => item.content.trim());
+          status.textContent = `Ready. Searching ${searchIndex.length} notes.`;
+          return searchIndex;
+        });
+        return loadingPromise;
+      };
+
+      const getSnippet = (content, query) => {
+        const normalized = content.toLowerCase();
+        const index = normalized.indexOf(query.toLowerCase());
+        const start = Math.max(0, index - 70);
+        const end = Math.min(content.length, (index > -1 ? index : 0) + query.length + 150);
+        const snippet = content.slice(start, end).replace(/\s+/g, ' ').trim();
+        const escaped = escapeHtml(`${start > 0 ? '... ' : ''}${snippet}${end < content.length ? ' ...' : ''}`);
+        return escaped.replace(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig'), '<mark>$1</mark>');
+      };
+
+      const getResultUrl = item => {
+        const query = input.value.trim();
+        if (item.url) {
+          const separator = item.url.includes('?') ? '&' : '?';
+          return `${item.url}${separator}q=${encodeURIComponent(query)}`;
+        }
+        return `reader.html?file=${encodeURIComponent(item.file)}&q=${encodeURIComponent(query)}`;
+      };
+
+      const runSearch = async () => {
+        const query = input.value.trim();
+        results.innerHTML = '';
+        if (query.length < 2) {
+          status.textContent = 'Type at least 2 letters to search all notes.';
+          return;
+        }
+
+        await loadSearchIndex();
+        const matches = searchIndex
+          .map(item => {
+            const titleMatch = item.title.toLowerCase().includes(query.toLowerCase());
+            const fileMatch = item.file.toLowerCase().includes(query.toLowerCase());
+            const contentMatch = item.content.toLowerCase().includes(query.toLowerCase());
+            return { ...item, titleMatch, fileMatch, contentMatch };
+          })
+          .filter(item => item.titleMatch || item.fileMatch || item.contentMatch)
+          .slice(0, 12);
+
+        if (!matches.length) {
+          status.textContent = `No result found for "${query}".`;
+          return;
+        }
+
+        status.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'} found for "${query}".`;
+        results.innerHTML = matches.map(item => `
+          <a class="search-result" href="${getResultUrl(item)}">
+            <strong>${escapeHtml(item.title)}</strong>
+            <span>${getSnippet(item.content || item.title, query)}</span>
+          </a>
+        `).join('');
+      };
+
+      let searchTimer;
+      input.addEventListener('focus', loadSearchIndex);
+      input.addEventListener('input', () => {
+        window.clearTimeout(searchTimer);
+        searchTimer = window.setTimeout(runSearch, 160);
+      });
+
+      clearButton.addEventListener('click', () => {
+        input.value = '';
+        results.innerHTML = '';
+        status.textContent = 'Type any word, name, birthday, grammar topic, or speak with voice search.';
+        input.focus();
+      });
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        voiceButton.disabled = true;
+        voiceButton.title = 'Voice search is not supported in this browser';
+      } else {
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-IN';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        voiceButton.addEventListener('click', () => {
+          voiceButton.classList.add('is-listening');
+          status.textContent = 'Listening... please speak your search.';
+          recognition.start();
+        });
+
+        recognition.addEventListener('result', event => {
+          input.value = event.results[0][0].transcript;
+          runSearch();
+        });
+
+        recognition.addEventListener('end', () => {
+          voiceButton.classList.remove('is-listening');
+        });
+
+        recognition.addEventListener('error', () => {
+          voiceButton.classList.remove('is-listening');
+          status.textContent = 'Voice search stopped. Please try again or type your search.';
+        });
+      }
+    })();
+  </script>
+  <script src="ai-assistant.js"></script>
 </body>
 </html>

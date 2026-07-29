@@ -139,6 +139,13 @@
       white-space: pre-wrap;
     }
 
+    .reader mark {
+      background: #fff1a8;
+      border-radius: 4px;
+      color: inherit;
+      padding: 0 2px;
+    }
+
     .reader.is-loading {
       color: var(--muted);
     }
@@ -311,6 +318,7 @@
 
       const params = new URLSearchParams(window.location.search);
       const requestedFile = params.get('file') || files[0].file;
+      const searchQuery = (params.get('q') || '').trim();
       const selected = files.find(item => item.file === requestedFile);
       const reader = document.getElementById('reader');
       const title = document.getElementById('title');
@@ -323,6 +331,36 @@
         fontSize = Math.min(26, Math.max(14, fontSize));
         reader.style.fontSize = `${fontSize}px`;
         localStorage.setItem('english-reader-font-size', String(fontSize));
+      };
+
+      const escapeHtml = value => value.replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      }[char]));
+
+      const highlightSearchQuery = content => {
+        if (!searchQuery) return escapeHtml(content);
+        const escaped = escapeHtml(content);
+        const safeQuery = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        let firstMatch = true;
+        return escaped.replace(new RegExp(`(${safeQuery})`, 'ig'), match => {
+          if (firstMatch) {
+            firstMatch = false;
+            return `<mark id="searchMatch">${match}</mark>`;
+          }
+          return `<mark>${match}</mark>`;
+        });
+      };
+
+      const scrollToSearchMatch = () => {
+        const match = document.getElementById('searchMatch');
+        if (!match) return;
+        window.setTimeout(() => {
+          match.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
       };
 
       files.forEach(item => {
@@ -350,7 +388,13 @@
             return response.text();
           })
           .then(content => {
-            reader.textContent = content;
+            if (searchQuery && content.toLowerCase().includes(searchQuery.toLowerCase())) {
+              reader.innerHTML = highlightSearchQuery(content);
+              filename.textContent = `${selected.file} - showing "${searchQuery}"`;
+              scrollToSearchMatch();
+            } else {
+              reader.textContent = content;
+            }
             reader.classList.remove('is-loading');
           })
           .catch(error => {
@@ -386,5 +430,6 @@
       updateProgress();
     })();
   </script>
+  <script src="ai-assistant.js"></script>
 </body>
 </html>
