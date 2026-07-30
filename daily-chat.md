@@ -217,3 +217,33 @@ Write one new sentence using each of today's five words.
 ### Next conversation question
 
 > Did your colleague enjoy the coffee, and what website issue did you resolve?
+
+### Describing completed client work
+
+**Original**
+
+> I resolved newest to oldest sorting an collection page. and I sent message in
+> english to cleint.
+
+**Corrected**
+
+> I fixed the newest-to-oldest sorting on a collection page, and I sent a
+> message in English to the client.
+
+**Professional version**
+
+> I fixed the newest-to-oldest product sorting on the collection page and sent
+> an update to the client in English.
+
+**Corrections**
+
+- Add `the` before a specific sorting feature.
+- `an collection page` → `a collection page`
+- Do not begin the second part with `and` after a full stop.
+- `message` → `a message`
+- `English` always begins with a capital letter.
+- `cleint` → `client`
+
+### Next conversation question
+
+> Was the client satisfied with the sorting update?
