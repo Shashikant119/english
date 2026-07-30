@@ -1,0 +1,149 @@
+{% liquid
+  assign heading = section.settings.heading
+%}
+
+<section
+  id="BasicSection-{{ section.id }}"
+  class="basic-section"
+  style="
+    --background-color: {{ section.settings.background_color }};
+    --text-color: {{ section.settings.text_color }};
+    --section-spacing: {{ section.settings.spacing }}px;
+  "
+>
+  <div class="basic-section__inner page-width">
+    {% if heading != blank %}
+      <h2 class="basic-section__heading">{{ heading | escape }}</h2>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <div class="basic-section__description rte">
+        {{ section.settings.description }}
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="basic-section__features">
+        {% for block in section.blocks %}
+          <article class="basic-section__feature" {{ block.shopify_attributes }}>
+            {% if block.settings.title != blank %}
+              <h3>{{ block.settings.title | escape }}</h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <div class="rte">{{ block.settings.text }}</div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Add a feature block in the Theme Editor.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% style %}
+  #BasicSection-{{ section.id }} {
+    padding-block: var(--section-spacing);
+    color: var(--text-color);
+    background: var(--background-color);
+  }
+
+  #BasicSection-{{ section.id }} .basic-section__heading {
+    margin-block-start: 0;
+  }
+
+  #BasicSection-{{ section.id }} .basic-section__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-block-start: 1.5rem;
+  }
+
+  #BasicSection-{{ section.id }} .basic-section__feature {
+    padding: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Basic learning section",
+  "tag": "section",
+  "class": "shopify-section--basic-learning",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Use this section to learn Shopify Liquid and schema.</p>"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#222222"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "Top and bottom spacing",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Explain a benefit or feature here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Basic learning section",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

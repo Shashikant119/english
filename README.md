@@ -10,6 +10,7 @@ This repository contains beginner-friendly English learning notes with Hindi exp
 - [Vocabulary](Vocabulary.txt)
 - [Message templates](message-send-notes.txt)
 - [General notes](Notes.txt)
+- [Daily English chat practice](daily-chat.md)
 
 ## Run on a local server
 
