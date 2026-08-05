@@ -31,3 +31,7 @@ Examples:
    6. What is the expected salary range for this position?
 
 Thank you. These details will help me understand the opportunity better before the interview.
+
+----------------------------- meeting link message -------------
+Hello Sir, all the website changes have been completed. If anything is still pending, we can schedule a meeting to 
+discuss and complete it. Please let me know when you are available, and I’ll share the meeting link.

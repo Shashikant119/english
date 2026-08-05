@@ -136,8 +136,56 @@
       min-height: 280px;
       overflow-wrap: anywhere;
       padding: clamp(22px, 5vw, 52px);
-      white-space: pre-wrap;
+      white-space: normal;
     }
+
+    .reader h2,
+    .reader h3,
+    .reader h4 {
+      letter-spacing: -.02em;
+      line-height: 1.25;
+    }
+
+    .reader h2 {
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(24px, 3vw, 32px);
+      margin: 40px 0 16px;
+      padding-bottom: 10px;
+    }
+
+    .reader h2:first-child { margin-top: 0; }
+    .reader h3 { font-size: 22px; margin: 30px 0 12px; }
+    .reader h4 { font-size: 18px; margin: 24px 0 10px; }
+    .reader p { margin: 0 0 16px; }
+    .reader ul, .reader ol { margin: 0 0 20px; padding-left: 28px; }
+    .reader li + li { margin-top: 7px; }
+    .reader strong { color: #101828; }
+    .reader p > code,
+    .reader li > code,
+    .reader td > code,
+    .reader blockquote > code {
+      background: #eef2f7;
+      border: 1px solid #dfe4ec;
+      border-radius: 5px;
+      color: #c7254e;
+      font: 85%/1.5 "SFMono-Regular", Consolas, monospace;
+      padding: 2px 5px;
+    }
+
+    .reader blockquote {
+      background: var(--soft);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      color: #344054;
+      margin: 20px 0;
+      padding: 14px 18px;
+    }
+
+    .reader-table-wrap { margin: 22px 0; overflow-x: auto; }
+    .reader table { border-collapse: collapse; font-size: 15px; min-width: 580px; width: 100%; }
+    .reader th { background: var(--soft); color: var(--primary-dark); text-align: left; }
+    .reader th, .reader td { border: 1px solid var(--line); padding: 11px 13px; }
+    .reader hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
 
     .reader mark {
       background: #fff1a8;
@@ -145,6 +193,51 @@
       color: inherit;
       padding: 0 2px;
     }
+
+    .reader a {
+      color: var(--primary);
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .code-block {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(1, 4, 9, .2);
+      color: #d4d4d4;
+      margin: 22px 0;
+      overflow: hidden;
+      white-space: normal;
+    }
+
+    .code-language {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      color: #8b949e;
+      display: block;
+      font: 700 11px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+      letter-spacing: .08em;
+      padding: 10px 16px;
+      text-transform: uppercase;
+    }
+
+    .code-block code {
+      color: #d4d4d4;
+      display: block;
+      font: 14px/1.7 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      overflow-x: auto;
+      padding: 18px;
+      tab-size: 2;
+      white-space: pre;
+    }
+
+    .token-comment { color: #6a9955; font-style: italic; }
+    .token-string { color: #ce9178; }
+    .token-keyword { color: #c586c0; }
+    .token-number { color: #b5cea8; }
+    .token-tag { color: #569cd6; }
 
     .reader.is-loading {
       color: var(--muted);
@@ -154,6 +247,135 @@
       background: #fff1f0;
       border-color: #ffc8c4;
       color: #a52a22;
+    }
+
+    .note-lock {
+      margin: 24px auto;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .note-lock-icon { font-size: 42px; line-height: 1; }
+    .note-lock h2 { border: 0; font-size: 25px; margin: 16px 0 8px; padding: 0; }
+    .note-lock p { color: var(--muted); font-size: 15px; }
+    .pin-fields { display: flex; gap: 10px; justify-content: center; margin: 22px 0 14px; }
+    .pin-input {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font: 800 24px/1 ui-monospace, monospace;
+      height: 52px;
+      letter-spacing: .35em;
+      outline: none;
+      padding: 0 8px 0 16px;
+      text-align: center;
+      width: 150px;
+    }
+    .pin-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(49, 87, 213, .12); }
+    .unlock-button {
+      background: var(--primary);
+      border: 0;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      font: 800 15px/1 system-ui, sans-serif;
+      min-height: 52px;
+      padding: 0 22px;
+    }
+    .pin-error { color: #b42318 !important; min-height: 24px; }
+
+    .daily-notes-intro {
+      background: linear-gradient(135deg, #203fae, #4f6ee8);
+      border-radius: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      padding: 24px;
+    }
+    .daily-notes-intro strong { color: #fff; display: block; font-size: 22px; }
+    .daily-notes-intro span { color: rgba(255, 255, 255, .82); display: block; margin-top: 5px; }
+    .daily-notes-section + .daily-notes-section { margin-top: 38px; }
+    .daily-notes-title {
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      font-size: 22px;
+      gap: 10px;
+      margin: 0 0 16px;
+      padding-bottom: 11px;
+    }
+    .daily-notes-title span {
+      align-items: center;
+      background: var(--soft);
+      border-radius: 9px;
+      color: var(--primary);
+      display: inline-flex;
+      flex: 0 0 auto;
+      font-size: 13px;
+      height: 32px;
+      justify-content: center;
+      min-width: 32px;
+      padding: 0 8px;
+    }
+    .sentence-grid { display: grid; gap: 14px; }
+    .sentence-card {
+      background: #fbfcff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      padding: 18px 20px;
+    }
+    .sentence-english { color: #182033; font-size: 18px; font-weight: 800; line-height: 1.45; }
+    .sentence-number { color: var(--primary); display: inline-block; margin-right: 7px; }
+    .sentence-hindi { color: #344054; font-size: 16px; margin: 8px 0 0 !important; }
+    .sentence-explanation {
+      background: #f1f4f9;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 12px 0 0 !important;
+      padding: 10px 12px;
+    }
+    .sentence-label { color: var(--primary); font-size: 11px; font-weight: 850; letter-spacing: .05em; text-transform: uppercase; }
+    .grammar-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grammar-card { background: var(--soft); border: 1px solid #dbe4ff; border-radius: 12px; padding: 16px; white-space: pre-line; }
+    .practice-tip { background: #ecfdf3; border: 1px solid #abefc6; border-radius: 14px; color: #05603a; margin-top: 18px; padding: 18px; }
+    .practice-tip strong { color: #05603a; display: block; margin-bottom: 6px; }
+
+    .plain-note-hero {
+      background: linear-gradient(135deg, #172554, #3157d5 60%, #6682e8);
+      border-radius: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      padding: clamp(20px, 4vw, 30px);
+    }
+    .plain-note-hero h2 { border: 0; color: #fff; font-size: clamp(23px, 4vw, 32px); margin: 0; padding: 0; }
+    .plain-note-section-title {
+      border-bottom: 1px solid var(--line);
+      color: #182033;
+      font-size: clamp(21px, 3vw, 27px);
+      margin: 38px 0 17px;
+      padding-bottom: 10px;
+    }
+    .plain-note-subtitle { color: var(--primary-dark); font-size: 19px; margin: 28px 0 12px; }
+    .plain-note-paragraph { color: #344054; line-height: 1.8; margin: 0 0 16px !important; white-space: pre-line; }
+    .plain-note-entry {
+      background: #fbfcff;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      color: #344054;
+      line-height: 1.75;
+      margin: 0 0 13px;
+      padding: 15px 17px;
+      white-space: pre-line;
+    }
+    .plain-note-entry strong, .plain-note-paragraph strong { color: var(--primary-dark); }
+    .plain-note-list { background: #f8faff; border-radius: 12px; margin-bottom: 20px !important; padding: 16px 18px 16px 42px !important; }
+    .plain-note-divider { border: 0; border-top: 1px dashed #cfd6e4; margin: 28px 0; }
+
+    @media (max-width: 640px) {
+      .grammar-grid { grid-template-columns: 1fr; }
+      .sentence-card { padding: 16px; }
     }
 
     .progress {
@@ -238,7 +460,7 @@
       <p class="filename" id="filename"></p>
     </div>
 
-    <pre class="reader is-loading" id="reader" tabindex="0">Loading content…</pre>
+    <article class="reader is-loading" id="reader" tabindex="0">Loading content…</article>
 
     <nav class="file-navigation" id="fileNavigation" aria-label="All learning notes"></nav>
   </main>
@@ -246,6 +468,70 @@
   <script>
     (() => {
       const files = [
+        {
+          file: 'notes-new-technology/README.md',
+          title: 'Technology Tutorial Library'
+        },
+        {
+          file: 'notes-new-technology/tutorials/html-complete.md',
+          title: 'Complete HTML Tutorial'
+        },
+        {
+          file: 'notes-new-technology/tutorials/css-complete.md',
+          title: 'Complete CSS Tutorial'
+        },
+        {
+          file: 'notes-new-technology/roadmap.md',
+          title: 'Six-Month MERN Roadmap'
+        },
+        {
+          file: 'notes-new-technology/modules/01-javascript.md',
+          title: 'MERN 01: JavaScript ES6+'
+        },
+        {
+          file: 'notes-new-technology/modules/02-react.md',
+          title: 'MERN 02: React.js'
+        },
+        {
+          file: 'notes-new-technology/modules/03-node.md',
+          title: 'MERN 03: Node.js'
+        },
+        {
+          file: 'notes-new-technology/modules/04-express.md',
+          title: 'MERN 04: Express.js'
+        },
+        {
+          file: 'notes-new-technology/modules/05-mongodb.md',
+          title: 'MERN 05: MongoDB and Mongoose'
+        },
+        {
+          file: 'notes-new-technology/modules/06-authentication.md',
+          title: 'MERN 06: Authentication'
+        },
+        {
+          file: 'notes-new-technology/modules/07-crud.md',
+          title: 'MERN 07: CRUD Architecture'
+        },
+        {
+          file: 'notes-new-technology/modules/08-dashboard.md',
+          title: 'MERN 08: Dashboards and Analytics'
+        },
+        {
+          file: 'notes-new-technology/modules/09-ecommerce.md',
+          title: 'MERN 09: E-commerce'
+        },
+        {
+          file: 'notes-new-technology/modules/10-deployment.md',
+          title: 'MERN 10: Deployment and DevOps'
+        },
+        {
+          file: 'notes-new-technology/projects/README.md',
+          title: 'MERN Guided Projects'
+        },
+        {
+          file: 'notes-new-technology/interview/README.md',
+          title: 'MERN Interview Preparation'
+        },
         {
           file: 'project-roadmap/README.md',
           title: 'Shopify AI Agents Project Roadmap'
@@ -307,6 +593,10 @@
           title: 'My Professional Introduction'
         },
         {
+          file: 'daily-chat.md',
+          title: 'Daily English Chat'
+        },
+        {
           file: 'politics/bjp-karyakarta-name-birthday-post-list.txt',
           title: 'BJP Karyakarta Name, Birthday and Post List'
         },
@@ -363,6 +653,205 @@
         }, 120);
       };
 
+      const syntaxHighlight = (code, language) => {
+        const keywords = /\b(?:async|await|break|case|catch|class|const|continue|default|delete|do|else|export|extends|false|finally|for|from|function|if|import|in|instanceof|let|new|null|of|return|static|super|switch|this|throw|true|try|typeof|undefined|var|while|yield|echo|public|private|protected|namespace|use|interface|implements|return)\b/g;
+        const tokenPattern = /(\/\*[\s\S]*?\*\/|\/\/[^\n]*|#[^\n]*|`(?:\\.|[^`])*`|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b\d+(?:\.\d+)?\b|<\/?[A-Za-z][^>]*>)/g;
+        let output = '';
+        let lastIndex = 0;
+
+        code.replace(tokenPattern, (token, _match, offset) => {
+          output += escapeHtml(code.slice(lastIndex, offset)).replace(keywords, '<span class="token-keyword">$&</span>');
+          let tokenClass = 'token-string';
+          if (token.startsWith('//') || token.startsWith('/*') || token.startsWith('#')) tokenClass = 'token-comment';
+          else if (/^\d/.test(token)) tokenClass = 'token-number';
+          else if (token.startsWith('<')) tokenClass = 'token-tag';
+          output += `<span class="${tokenClass}">${escapeHtml(token)}</span>`;
+          lastIndex = offset + token.length;
+          return token;
+        });
+        output += escapeHtml(code.slice(lastIndex)).replace(keywords, '<span class="token-keyword">$&</span>');
+        return output;
+      };
+
+      const renderInlineMarkdown = content => {
+        let rendered = highlightSearchQuery(content);
+        const currentDirectory = selected.file.includes('/')
+          ? selected.file.slice(0, selected.file.lastIndexOf('/') + 1)
+          : '';
+
+        rendered = rendered.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, target) => {
+          if (/^(https?:|mailto:|#)/i.test(target)) {
+            return `<a href="${target}">${label}</a>`;
+          }
+
+          const resolvedPath = new URL(target, `${window.location.origin}/${currentDirectory}`)
+            .pathname
+            .replace(/^\//, '');
+          const linkedFile = files.find(item => item.file === resolvedPath);
+          if (!linkedFile) return match;
+
+          return `<a href="reader.html?file=${encodeURIComponent(resolvedPath)}">${label}</a>`;
+        });
+        return rendered
+          .replace(/`([^`]+)`/g, '<code>$1</code>')
+          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      };
+
+      const renderMarkdownText = content => {
+        const blocks = content.trim().split(/\n\s*\n/);
+        return blocks.map(block => {
+          const lines = block.split('\n');
+          const heading = lines[0].match(/^(#{1,4})\s+(.+)$/);
+          if (heading) {
+            const level = Math.min(4, heading[1].length + 1);
+            return `<h${level}>${renderInlineMarkdown(heading[2])}</h${level}>`;
+          }
+          if (lines.length > 1 && lines[0].includes('|') && /^\s*\|?\s*:?-+/.test(lines[1])) {
+            const rows = lines.filter((_, index) => index !== 1).map(line => line.replace(/^\||\|$/g, '').split('|'));
+            const head = rows.shift() || [];
+            return `<div class="reader-table-wrap"><table><thead><tr>${head.map(cell => `<th>${renderInlineMarkdown(cell.trim())}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${renderInlineMarkdown(cell.trim())}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+          }
+          if (lines.every(line => /^[-*]\s+/.test(line))) {
+            return `<ul>${lines.map(line => `<li>${renderInlineMarkdown(line.replace(/^[-*]\s+/, ''))}</li>`).join('')}</ul>`;
+          }
+          if (lines.every(line => /^\d+\.\s+/.test(line))) {
+            return `<ol>${lines.map(line => `<li>${renderInlineMarkdown(line.replace(/^\d+\.\s+/, ''))}</li>`).join('')}</ol>`;
+          }
+          if (lines.every(line => /^>\s?/.test(line))) {
+            return `<blockquote>${renderInlineMarkdown(lines.map(line => line.replace(/^>\s?/, '')).join(' '))}</blockquote>`;
+          }
+          if (lines.length === 1 && /^---+$/.test(lines[0])) return '<hr>';
+          return `<p>${renderInlineMarkdown(lines.join(' '))}</p>`;
+        }).join('');
+      };
+
+      const renderNote = content => {
+        if (!selected.file.endsWith('.md')) return highlightSearchQuery(content);
+
+        const parts = content.split(/```([\w+-]*)\n([\s\S]*?)```/g);
+        let rendered = '';
+        for (let index = 0; index < parts.length; index += 3) {
+          rendered += parts[index] ? renderMarkdownText(parts[index]) : '';
+          if (index + 2 < parts.length) {
+            const language = parts[index + 1] || 'code';
+            const code = (parts[index + 2] || '').replace(/\n$/, '');
+            rendered += `<section class="code-block"><span class="code-language">${escapeHtml(language)}</span><code>${syntaxHighlight(code, language)}</code></section>`;
+          }
+        }
+        return rendered;
+      };
+
+      const renderDailyNotes = content => {
+        const firstDivider = content.indexOf('============================================================');
+        const introLines = content.slice(0, firstDivider).trim().split('\n');
+        let output = `<div class="daily-notes-intro"><strong>${highlightSearchQuery(introLines[0] || 'Daily English Notes')}</strong><span>${highlightSearchQuery(introLines.slice(1).join(' '))}</span></div>`;
+        const sectionPattern = /={20,}\n([^\n]+)\n={20,}\n([\s\S]*?)(?=\n={20,}\n|$)/g;
+        let section;
+
+        while ((section = sectionPattern.exec(content)) !== null) {
+          const sectionTitle = section[1].trim();
+          let sectionBody = section[2].trim();
+          const sectionNumber = (sectionTitle.match(/^\d+/) || ['✓'])[0];
+          const cleanTitle = sectionTitle.replace(/^\d+\.\s*/, '');
+          output += `<section class="daily-notes-section"><h2 class="daily-notes-title"><span>${sectionNumber}</span>${highlightSearchQuery(cleanTitle)}</h2>`;
+
+          if (sectionTitle === 'QUICK GRAMMAR HELP') {
+            let practiceText = '';
+            if (sectionBody.includes('PRACTICE TIP:')) {
+              [sectionBody, practiceText] = sectionBody.split('PRACTICE TIP:');
+            }
+            const grammarItems = sectionBody.trim().split(/\n\s*\n/).filter(Boolean);
+            output += `<div class="grammar-grid">${grammarItems.map(item => `<div class="grammar-card">${highlightSearchQuery(item.replace(/^(\d+)\)\s*/, '$1. '))}</div>`).join('')}</div>`;
+            if (practiceText.trim()) output += `<div class="practice-tip"><strong>💡 Practice tip</strong>${highlightSearchQuery(practiceText.replace(/\s+/g, ' ').trim())}</div>`;
+          } else {
+            const cards = [];
+            const sentencePattern = /(\d+)\) English:\s*([^\n]+)\n\s*Hindi:\s*([^\n]+)\n\s*Explanation:\s*([\s\S]*?)(?=\n\s*\n\d+\) English:|$)/g;
+            let sentence;
+            while ((sentence = sentencePattern.exec(sectionBody)) !== null) {
+              cards.push(`<article class="sentence-card"><div class="sentence-label">English sentence</div><div class="sentence-english"><span class="sentence-number">${sentence[1]}.</span>${highlightSearchQuery(sentence[2].trim())}</div><p class="sentence-hindi"><span class="sentence-label">Hindi</span><br>${highlightSearchQuery(sentence[3].trim())}</p><p class="sentence-explanation"><span class="sentence-label">When to use</span><br>${highlightSearchQuery(sentence[4].replace(/\s+/g, ' ').trim())}</p></article>`);
+            }
+            output += `<div class="sentence-grid">${cards.join('')}</div>`;
+          }
+          output += '</section>';
+        }
+        return output;
+      };
+
+      const stylePlainLabels = value => highlightSearchQuery(value)
+        .replace(/(^|\n)([A-Za-z][A-Za-z +/–-]{1,28}:)/g, '$1<strong>$2</strong>');
+
+      const renderPlainTextNote = content => {
+        const lines = content.replace(/\r/g, '').split('\n');
+        let output = `<div class="plain-note-hero"><h2>${escapeHtml(selected.title)}</h2></div>`;
+        let index = 0;
+        const isDivider = line => !line.includes('|') && /^\s*[=_-]{5,}.*[=_-]{5,}\s*$/.test(line);
+        const isTableDivider = line => /^\s*\|?\s*:?-{2,}/.test(line) && line.includes('|');
+
+        const firstLine = (lines[0] || '').trim();
+        const secondLine = (lines[1] || '').trim();
+        if (firstLine && (isDivider(secondLine) || /^[A-Z][A-Z\s:&–—+-]+$/.test(firstLine) || /introduction/i.test(firstLine))) {
+          index = isDivider(secondLine) ? 2 : 1;
+        }
+
+        while (index < lines.length) {
+          const line = lines[index].trim();
+          const next = (lines[index + 1] || '').trim();
+          if (!line) { index += 1; continue; }
+
+          if (isDivider(line)) { index += 1; continue; }
+
+          if (isDivider(next)) {
+            const className = next.startsWith('=') ? 'plain-note-section-title' : 'plain-note-subtitle';
+            output += `<h2 class="${className}">${highlightSearchQuery(line)}</h2>`;
+            index += 2;
+            continue;
+          }
+
+          if (line.includes('|') && isTableDivider(next)) {
+            const tableLines = [line];
+            index += 2;
+            while (index < lines.length && lines[index].includes('|') && lines[index].trim()) {
+              tableLines.push(lines[index].trim());
+              index += 1;
+            }
+            const rows = tableLines.map(row => row.replace(/^\||\|$/g, '').split('|').map(cell => cell.trim()));
+            const head = rows.shift() || [];
+            output += `<div class="reader-table-wrap"><table><thead><tr>${head.map(cell => `<th>${highlightSearchQuery(cell)}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${highlightSearchQuery(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+            continue;
+          }
+
+          if (/^[-*]\s+/.test(line)) {
+            const items = [];
+            while (index < lines.length && /^\s*[-*]\s+/.test(lines[index])) {
+              items.push(lines[index].replace(/^\s*[-*]\s+/, ''));
+              index += 1;
+            }
+            output += `<ul class="plain-note-list">${items.map(item => `<li>${stylePlainLabels(item)}</li>`).join('')}</ul>`;
+            continue;
+          }
+
+          const paragraph = [lines[index].trim()];
+          index += 1;
+          while (index < lines.length && lines[index].trim() && !isDivider(lines[index].trim())) {
+            const current = lines[index].trim();
+            const after = (lines[index + 1] || '').trim();
+            if (isDivider(after) || (current.includes('|') && isTableDivider(after))) break;
+            paragraph.push(current);
+            index += 1;
+          }
+
+          const paragraphText = paragraph.join('\n');
+          if (/^\d+[.)]\s+/.test(paragraphText)) {
+            output += `<div class="plain-note-entry">${stylePlainLabels(paragraphText)}</div>`;
+          } else if (/^[A-Z][A-Z\s&–—:+-]{3,}:?$/.test(paragraphText) || /^[A-Za-z][^\n]{1,35}:$/.test(paragraphText)) {
+            output += `<h3 class="plain-note-subtitle">${highlightSearchQuery(paragraphText.replace(/:$/, ''))}</h3>`;
+          } else {
+            output += `<p class="plain-note-paragraph">${stylePlainLabels(paragraphText)}</p>`;
+          }
+        }
+        return output;
+      };
+
       files.forEach(item => {
         const link = document.createElement('a');
         link.href = `reader.html?file=${encodeURIComponent(item.file)}`;
@@ -370,6 +859,78 @@
         if (selected && item.file === selected.file) link.setAttribute('aria-current', 'page');
         navigation.appendChild(link);
       });
+
+      const loadSelectedNote = () => {
+        reader.classList.add('is-loading');
+        fetch(selected.file)
+          .then(response => {
+            if (!response.ok) throw new Error(`Unable to load this note (${response.status}).`);
+            return response.text();
+          })
+          .then(content => {
+            if (selected.file === 'Notes.txt') {
+              reader.innerHTML = renderDailyNotes(content);
+            } else if (selected.file.endsWith('.md')) {
+              reader.innerHTML = renderNote(content);
+            } else if (selected.file.endsWith('.txt')) {
+              reader.innerHTML = renderPlainTextNote(content);
+            } else {
+              reader.textContent = content;
+            }
+            if (searchQuery && content.toLowerCase().includes(searchQuery.toLowerCase())) {
+              filename.textContent = `${selected.file} - showing "${searchQuery}"`;
+              scrollToSearchMatch();
+            }
+            reader.classList.remove('is-loading');
+          })
+          .catch(error => {
+            reader.textContent = `${error.message}\n\nRun this project through the local server instead of opening reader.html directly.`;
+            reader.classList.remove('is-loading');
+            reader.classList.add('error');
+          });
+      };
+
+      const showDailyChatLock = () => {
+        reader.classList.remove('is-loading');
+        reader.innerHTML = `
+          <form class="note-lock" id="dailyChatLock">
+            <div class="note-lock-icon" aria-hidden="true">🔒</div>
+            <h2>Daily English Chat is protected</h2>
+            <p>Enter your 4-digit PIN to read this private note.</p>
+            <div class="pin-fields">
+              <input class="pin-input" id="dailyChatPin" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" aria-label="4-digit PIN" required>
+              <button class="unlock-button" type="submit">Unlock</button>
+            </div>
+            <p class="pin-error" id="dailyChatPinError" role="alert"></p>
+          </form>`;
+
+        const form = document.getElementById('dailyChatLock');
+        const pinInput = document.getElementById('dailyChatPin');
+        const pinError = document.getElementById('dailyChatPinError');
+        pinInput.focus();
+        pinInput.addEventListener('input', () => {
+          pinInput.value = pinInput.value.replace(/\D/g, '').slice(0, 4);
+          pinError.textContent = '';
+        });
+        form.addEventListener('submit', async event => {
+          event.preventDefault();
+          if (!/^\d{4}$/.test(pinInput.value)) {
+            pinError.textContent = 'Please enter a valid 4-digit PIN.';
+            return;
+          }
+          const data = new TextEncoder().encode(pinInput.value);
+          const digest = await crypto.subtle.digest('SHA-256', data);
+          const hash = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
+          if (hash !== '30afd706f8e0fbd60315a1ca0dc8e8adcc1789246311c1259ca87a3d5e448273') {
+            pinInput.value = '';
+            pinError.textContent = 'Incorrect PIN. Please try again.';
+            pinInput.focus();
+            return;
+          }
+          sessionStorage.setItem('daily-chat-unlocked', 'true');
+          loadSelectedNote();
+        });
+      };
 
       if (!selected) {
         title.textContent = 'Note not found';
@@ -382,26 +943,11 @@
         title.textContent = selected.title;
         filename.textContent = selected.file;
 
-        fetch(selected.file)
-          .then(response => {
-            if (!response.ok) throw new Error(`Unable to load this note (${response.status}).`);
-            return response.text();
-          })
-          .then(content => {
-            if (searchQuery && content.toLowerCase().includes(searchQuery.toLowerCase())) {
-              reader.innerHTML = highlightSearchQuery(content);
-              filename.textContent = `${selected.file} - showing "${searchQuery}"`;
-              scrollToSearchMatch();
-            } else {
-              reader.textContent = content;
-            }
-            reader.classList.remove('is-loading');
-          })
-          .catch(error => {
-            reader.textContent = `${error.message}\n\nRun this project through the local server instead of opening reader.html directly.`;
-            reader.classList.remove('is-loading');
-            reader.classList.add('error');
-          });
+        if (selected.file === 'daily-chat.md' && sessionStorage.getItem('daily-chat-unlocked') !== 'true') {
+          showDailyChatLock();
+        } else {
+          loadSelectedNote();
+        }
       }
 
       document.getElementById('fontDown').addEventListener('click', () => {
@@ -430,6 +976,5 @@
       updateProgress();
     })();
   </script>
-  <script src="ai-assistant.js"></script>
 </body>
 </html>
