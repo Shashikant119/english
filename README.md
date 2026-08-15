@@ -11,6 +11,7 @@ This repository contains beginner-friendly English learning notes with Hindi exp
 - [Message templates](message-send-notes.txt)
 - [General notes](Notes.txt)
 - [Daily English chat practice](daily-chat.md)
+- [Daily 15-minute English practice](daily-15-minute-english-practice.md)
 
 ## Run on a local server
 
