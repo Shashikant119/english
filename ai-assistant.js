@@ -17,6 +17,7 @@
     { file: 'english-learning-stories.txt', title: 'English Learning Stories' },
     { file: 'professional-introduction.txt', title: 'My Professional Introduction' },
     { file: 'politics/bjp-karyakarta-name-birthday-post-list.txt', title: 'BJP Karyakarta Name, Birthday and Post List' },
+    { file: 'politics/voice-note-desh-se-kya-gayab-hai.txt', title: 'Voice Note: Desh Se Kya Kya Gayab Hai' },
     { file: 'README.md', title: 'Project Guide' }
   ];
 
@@ -455,7 +456,12 @@
 
   const chooseVoice = lang => {
     refreshVoices();
-    const preferred = availableVoices.find(voice => voice.lang === lang)
+    const femaleVoice = availableVoices.find(voice =>
+      voice.lang.toLowerCase().startsWith(lang.slice(0, 2).toLowerCase())
+      && /female|woman|zira|samantha|veena|lekha|kalpana|heera|google/i.test(voice.name)
+    );
+    const preferred = femaleVoice
+      || availableVoices.find(voice => voice.lang === lang)
       || availableVoices.find(voice => voice.lang.toLowerCase().startsWith(lang.slice(0, 2).toLowerCase()))
       || availableVoices.find(voice => /india|hindi|english/i.test(`${voice.name} ${voice.lang}`));
     return preferred || null;
