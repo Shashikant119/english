@@ -1,5 +1,8 @@
 # MERN Interview Preparation
 
+For the timed PHP, JavaScript, Liquid, HTML/CSS, and Shopify assessment, use
+[Shopify Developer Test Preparation](./shopify-developer-test-preparation.md).
+
 Use these question patterns to generate spaced-repetition cards. A strong answer
 defines the idea, explains why, gives an example, names a trade-off, and mentions
 a common failure.
@@ -67,4 +70,3 @@ ask thoughtful questions about engineering quality and expectations.
 Score 1–5: clarification, correctness, fundamentals, trade-offs, security,
 testing, communication, code readability, complexity, and debugging. Repeat weak
 areas after 1, 3, 7, 14, and 30 days.
-
