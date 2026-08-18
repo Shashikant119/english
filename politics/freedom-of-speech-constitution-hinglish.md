@@ -67,3 +67,16 @@ Yeh note general education ke liye hai, legal advice nahi. Kisi specific post, p
 
 - Local PDF: [Bharat Ka Samvidhan — Hindi and English PDF](./575648bd8ecb7654db902b93115d35e4.pdf)
 - Legislative Department, Ministry of Law and Justice, Government of India: [Constitution of India](https://www.legislative.gov.in/documents/constitution-of-india/constitution-of-india-AjN2EjMtQWa?pageTitle=Constitution-of-India)
+
+
+-------------- reels text first --------------
+क्या आप जानते हैं कि हमारे संविधान ने हमें बोलने की आज़ादी दी है?
+
+हाँ, भारत में हमें अपनी बात रखने, सरकार की नीतियों की आलोचना करने और अपने विचार व्यक्त करने का पूरा हक़ है।
+
+लेकिन, यह आज़ादी असीमित नहीं है।
+
+संविधान के अनुच्छेद 19(2) के तहत इस पर कुछ उचित प्रतिबंध लगाए गए हैं – जैसे, देश की एकता, सुरक्षा, और सार्वजनिक व्यवस्था बनाए रखना।
+
+इसका मतलब यह है कि आज़ादी के नाम पर हम हिंसा नहीं भड़का सकते, किसी की मानहानि नहीं कर सकते, या कोर्ट की अवमानना नहीं कर सकते।"
+------------------------------------------------------------------------------
