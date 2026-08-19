@@ -887,3 +887,371 @@ For every solution, answer aloud:
 ## Quick confidence reminder
 
 You do not need to remember every API. The interviewer is testing whether you can reason clearly, write safe fundamentals, debug systematically, and explain your choices. Build the smallest correct solution, test it, and communicate honestly.
+
+---
+
+## 11. Likely interview questions and answers
+
+Use these questions for practice only. Understand each answer and practise explaining it in your own words.
+
+### Section A: MCQs and one-line answers
+
+#### 1. What is the difference between `==` and `===` in PHP?
+
+`==` compares values and may perform type conversion. `===` compares both the value and data type.
+
+```php
+0 == '0';  // true
+0 === '0'; // false
+```
+
+#### 2. What is the difference between `let`, `const`, and `var`?
+
+`let` and `const` are block-scoped. A `let` variable can be reassigned, while a `const` variable cannot. `var` is function-scoped and hoisted, so it is generally avoided in modern JavaScript.
+
+#### 3. What is the difference between `isset()` and `empty()`?
+
+`isset()` returns false when a variable is missing or `null`. `empty()` returns true for an empty string, `0`, `'0'`, `false`, `null`, or an empty array.
+
+#### 4. What is event delegation?
+
+Event delegation means adding one event listener to a parent instead of adding a separate listener to every child. The clicked child can be identified with `event.target.closest()`. It also works with dynamically inserted elements.
+
+#### 5. What is the difference between `map()`, `filter()`, and `reduce()`?
+
+- `map()` transforms every item and returns a new array.
+- `filter()` returns a new array containing matching items.
+- `reduce()` combines the entire array into one final value.
+
+#### 6. What is the difference between a Shopify section and a snippet?
+
+A section is a merchant-configurable component and can contain a schema. A snippet contains reusable markup and is included with `{% render %}`.
+
+#### 7. What is the difference between a product ID and a variant ID?
+
+A product ID identifies the complete product. A variant ID identifies a specific option combination such as size and colour. Shopify's cart requires a variant ID.
+
+#### 8. What is the difference between `preventDefault()` and `stopPropagation()`?
+
+`preventDefault()` prevents the browser's default action. `stopPropagation()` prevents the event from bubbling to ancestor elements.
+
+#### 9. What is the difference between `{{ }}` and `{% %}` in Liquid?
+
+`{{ }}` outputs a value. `{% %}` performs logic such as assignments, conditions, and loops.
+
+```liquid
+{{ product.title }}
+
+{% if product.available %}
+  In stock
+{% endif %}
+```
+
+#### 10. What is the difference between debounce and throttle?
+
+Debounce runs a function after repeated calls stop. Throttle limits a function to running at most once during a fixed interval.
+
+### Section B: debugging and refactoring
+
+#### 11. What is wrong with this PHP condition?
+
+```php
+if ($status = 'active') {
+    echo 'Active';
+}
+```
+
+It assigns a value instead of comparing it. Use strict comparison:
+
+```php
+if ($status === 'active') {
+    echo 'Active';
+}
+```
+
+#### 12. Why does this JavaScript calculation produce the wrong result?
+
+```js
+const price = input.value;
+const total = price + 100;
+```
+
+Input values are strings, so `+` may concatenate instead of adding numbers.
+
+```js
+const price = Number(input.value);
+
+if (Number.isFinite(price)) {
+  const total = price + 100;
+}
+```
+
+#### 13. Why can this DOM code throw an error?
+
+```js
+document.querySelector('.cart-button')
+  .addEventListener('click', addToCart);
+```
+
+`querySelector()` returns `null` when the element does not exist.
+
+```js
+const button = document.querySelector('.cart-button');
+
+if (button) {
+  button.addEventListener('click', addToCart);
+}
+```
+
+#### 14. How should user-generated PHP output be rendered safely?
+
+```php
+$name = $_POST['name'] ?? '';
+
+echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+```
+
+This protects the HTML context from cross-site scripting.
+
+#### 15. How do you prevent SQL injection?
+
+Use prepared statements and bound values:
+
+```php
+$statement = $pdo->prepare(
+    'SELECT * FROM customers WHERE email = :email'
+);
+
+$statement->execute(['email' => $email]);
+```
+
+#### 16. How do you safely render an optional Liquid metafield?
+
+```liquid
+{% if product.metafields.custom.subtitle != blank %}
+  <p>{{ product.metafields.custom.subtitle | escape }}</p>
+{% endif %}
+```
+
+### Section C: live coding
+
+#### 17. Calculate an order total from an array
+
+```js
+const items = [
+  { price: 1000, quantity: 2 },
+  { price: 500, quantity: 1 },
+];
+
+const total = items.reduce((sum, item) => {
+  return sum + item.price * item.quantity;
+}, 0);
+
+console.log(total); // 2500
+```
+
+The solution uses `O(n)` time and `O(1)` additional space.
+
+#### 18. Remove duplicate values from an array
+
+```js
+const values = [1, 2, 2, 3, 3, 4];
+const uniqueValues = [...new Set(values)];
+
+console.log(uniqueValues); // [1, 2, 3, 4]
+```
+
+#### 19. Handle multiple remove buttons using event delegation
+
+```js
+document
+  .querySelector('[data-cart-items]')
+  ?.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-remove-item]');
+
+    if (!button) return;
+
+    removeItem(button.dataset.line);
+  });
+```
+
+This approach also handles buttons inserted dynamically after page load.
+
+#### 20. Add a variant using Shopify's Ajax Cart API
+
+```js
+async function addToCart(variantId, quantity = 1) {
+  const response = await fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({
+      items: [{ id: variantId, quantity }],
+    }),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.description || 'Unable to add product');
+  }
+
+  return result;
+}
+```
+
+#### 21. Safely render a responsive Shopify product image
+
+```liquid
+{% if product.featured_image %}
+  {{ product.featured_image
+    | image_url: width: 800
+    | image_tag:
+      loading: 'lazy',
+      widths: '400, 600, 800',
+      alt: product.featured_image.alt
+  }}
+{% endif %}
+```
+
+Do not lazy-load the primary above-the-fold product image.
+
+#### 22. Create a responsive product grid
+
+```css
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+```
+
+#### 23. Create a PHP email-validation endpoint
+
+```php
+<?php
+
+header('Content-Type: application/json; charset=utf-8');
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit;
+}
+
+$email = filter_input(
+    INPUT_POST,
+    'email',
+    FILTER_VALIDATE_EMAIL
+);
+
+if (!$email) {
+    http_response_code(422);
+    echo json_encode(['error' => 'A valid email is required']);
+    exit;
+}
+
+echo json_encode([
+    'success' => true,
+    'email' => $email,
+]);
+```
+
+### Section D: Shopify scenario questions
+
+#### 24. How would you update a cart drawer without reloading the page?
+
+Use Shopify's Ajax Cart API to update the cart. Fetch updated section HTML and replace only the cart drawer and cart count. Use event delegation to avoid duplicate listeners, handle errors, and announce the result through an `aria-live` region.
+
+#### 25. What would you investigate first when a product page is slow?
+
+1. LCP and hero-image size.
+2. Third-party application scripts.
+3. Render-blocking CSS and JavaScript.
+4. Unused libraries.
+5. Images without dimensions.
+6. Excessive DOM size and Liquid loops.
+
+Use responsive images, defer non-critical scripts, and lazy-load below-the-fold media.
+
+#### 26. What is the difference between a metafield and a metaobject?
+
+A metafield stores a structured custom value attached to a Shopify resource. A metaobject is a reusable structured record that can contain multiple fields and be referenced by multiple products or pages.
+
+#### 27. Why must an Admin API token not be placed in Liquid or theme JavaScript?
+
+Theme JavaScript is public in the customer's browser. Anyone could inspect and misuse the token. Admin API requests must run through a secure backend, with credentials stored in environment variables.
+
+#### 28. What should change when a customer selects another variant?
+
+- Selected variant ID.
+- Price and compare-at price.
+- Product media.
+- Availability and inventory message.
+- Add to Cart button state.
+- Product URL.
+
+The selected variant ID, not the product ID, must be submitted to the cart.
+
+#### 29. When should you use a section instead of a snippet?
+
+Use a section when the merchant needs to add, remove, reorder, or configure the component. Use a snippet for reusable markup and explicitly pass every required variable.
+
+#### 30. Write a basic Shopify section with repeatable blocks
+
+```liquid
+<section>
+  <h2>{{ section.settings.heading | escape }}</h2>
+
+  {% for block in section.blocks %}
+    <div {{ block.shopify_attributes }}>
+      {{ block.settings.title | escape }}
+    </div>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Feature cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Features"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature cards"
+    }
+  ]
+}
+{% endschema %}
+```
+
+### Final practice priority
+
+Write questions 17–23 at least twice without looking at the answers. For each solution, explain the requirement, approach, edge cases, complexity, accessibility, and production improvements aloud.
